@@ -118,8 +118,6 @@ If no `flushStrategy` is provided, the tracker operates in **manual mode**:
 * `track()` accumulates events
 * you must call `flush()` explicitly
 
-> ⚠️ In development (`__DEV__`), a warning may be logged if no `flushStrategy` is provided.
-
 ---
 
 ### `immediate`
@@ -178,20 +176,6 @@ flushStrategy: {
 * Feed impression tracking (e.g. FlatList / RecyclerView)
 * Analytics batching to reduce network overhead
 * Visibility-based features (e.g. autoplay, lazy loading)
-
----
-
-## ⚠️ Notes on imports
-
-Currently, the package may not expose a root entrypoint.
-
-If needed, you can use a deep import:
-
-```ts
-import { createTracker } from 'impression-kit/dist/core/engine/createTracker'
-```
-
-> This will be improved in future versions.
 
 ---
 
